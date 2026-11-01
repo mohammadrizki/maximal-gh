@@ -1,6 +1,6 @@
-# 🚀 Maximal-T Prompt (Oh-My-Bash + Ghostty + t)
+# 🚀 Maximal-GH Prompt (Oh-My-Bash + Ghostty + t)
 
-Konfigurasi lingkungan terminal Linux super produktif, estetik (*eye candy*), dan efisien untuk **Arch Linux**. Repositori ini berisi tema kustom bash orisinal **`maximal-t`** yang dirancang khusus dari nol untuk mengintegrasikan emulator terminal **Ghostty** dengan pelacak tugas CLI minimalis **`t`**.
+Konfigurasi lingkungan terminal Linux super produktif, estetik (*eye candy*), dan efisien untuk **Arch Linux**. Repositori ini berisi tema kustom bash orisinal **`maximal-gh`** yang dirancang khusus dari nol untuk mengintegrasikan emulator terminal **Ghostty** dengan pelacak tugas CLI minimalis **`t`**.
 
 ---
 
@@ -40,7 +40,7 @@ Unduh skrip `sjl/t` asli dan buat menjadi biner sistem global:
 
 ```bash
 # Klon repositori t ke folder lokal
-git clone https://github.com ~/.t-todo
+git clone https://github.com/sjl/t.git ~/.t-todo
 
 # Buat direktori tempat menyimpan berkas teks daftar tugas
 mkdir ~/tasks
@@ -55,21 +55,18 @@ EOF'
 sudo chmod +x /usr/local/bin/t
 ```
 
-### 2. Pemasangan Tema Kustom `maximal-t`
+### 2. Pemasangan Tema Kustom `maximal-gh`
 Buat berkas tema baru di dalam folder kustom Oh-My-Bash:
 
 ```bash
-mkdir -p ~/.oh-my-bash/custom/themes/maximal-t
-nano ~/.oh-my-bash/custom/themes/maximal-t/maximal-t.theme.sh
+git clone https://github.com/mohammadrizki/maximal-gh.git ~/.oh-my-bash/custom/themes/maximal-gh
 ```
-
-Tempelkan seluruh kode skrip fungsi `_omb_theme_PROMPT_COMMAND` kustom Anda ke dalam berkas tersebut, lalu simpan.
 
 ### 3. Aktivasi di `.bashrc`
 Buka file konfigurasi Bash Anda (`nano ~/.bashrc`) dan sesuaikan baris tema menjadi:
 
 ```bash
-OSH_THEME="maximal-t"
+OSH_THEME="maximal-gh"
 ```
 Terapkan perubahan dengan perintah: `source ~/.bashrc`
 
